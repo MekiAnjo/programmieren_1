@@ -3,7 +3,7 @@
  */
 public class MeinErstesProgramm {
 
-  private static final int mehl = 100;
+  private static final int mehlMenge = 100;
   private static final int kartoffeln = 1000;
   private static final int pizza = 4;
   private static final int spieße = 10;

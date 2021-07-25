@@ -28,14 +28,8 @@ public class MeinErstesProgramm {
     double kartoffelsalatKcalGesamt = kartoffelsalat * kartoffelsalatKcal;
     double hackfleischKcalGesamt = hackfleisch * hackfleischKcal;
 
-    double kcalGesamt = berechneKalorien(
-      mehlKcalGesamt,
-      kartoffelnKcalGesamt,
-      tiefkuehlpizzaKcalGesamt,
-      grillspiesseKcalGesamt,
-      kartoffelsalatKcalGesamt,
-      hackfleischKcalGesamt
-    );
+    double kcalGesamt = berechneKalorien(mehlKcalGesamt, kartoffelnKcalGesamt, tiefkuehlpizzaKcalGesamt,
+        grillspiesseKcalGesamt, kartoffelsalatKcalGesamt, hackfleischKcalGesamt);
 
     System.out.println("Einkaufsliste");
     System.out.println(trennzeichen);
@@ -46,23 +40,27 @@ public class MeinErstesProgramm {
     System.out.printf("%-15s = %.2f gr%n", "Kartoffelsalat", kartoffelsalat);
     System.out.printf("%-15s = %.2f gr%n", "Hackfleisch", hackfleisch);
     System.out.println(trennzeichen);
+
+    System.out.println();
+
+    System.out.println("Kalorien der Lebensmittel");
+    System.out.println(trennzeichen);
+    System.out.printf("%-15s = %.2f gr%n", "Mehl", mehlKcalGesamt);
+    System.out.printf("%-15s = %.2f gr%n", "Kartoffeln", kartoffelnKcalGesamt);
+    System.out.printf("%-15s = %.2f gr%n", "Tiefkühlpizza", tiefkuehlpizzaKcalGesamt);
+    System.out.printf("%-15s = %.2f gr%n", "Grillspiesse", grillspiesseKcalGesamt);
+    System.out.printf("%-15s = %.2f gr%n", "Kartoffelsalat", kartoffelsalatKcalGesamt);
+    System.out.printf("%-15s = %.2f gr%n", "Hackfleisch", hackfleischKcalGesamt);
+    System.out.println();
+    System.out.printf("Summe der Kalorien aller Produkte = %.2f%n", kcalGesamt);
+    System.out.println(trennzeichen);
+
   }
 
-  private static double berechneKalorien(
-    double mehlKcalGesamt,
-    double kartoffelnKcalGesamt,
-    double tiefkuehlpizzaKcalGesamt,
-    double grillspiesseKcalGesamt,
-    double kartoffelsalatKcalGesamt,
-    double hackfleischKcalGesamt
-  ) {
-    return (
-      mehlKcalGesamt +
-      kartoffelnKcalGesamt +
-      tiefkuehlpizzaKcalGesamt +
-      grillspiesseKcalGesamt +
-      kartoffelsalatKcalGesamt +
-      hackfleischKcalGesamt
-    );
+  private static double berechneKalorien(double mehlKcalGesamt, double kartoffelnKcalGesamt,
+      double tiefkuehlpizzaKcalGesamt, double grillspiesseKcalGesamt, double kartoffelsalatKcalGesamt,
+      double hackfleischKcalGesamt) {
+    return (mehlKcalGesamt + kartoffelnKcalGesamt + tiefkuehlpizzaKcalGesamt + grillspiesseKcalGesamt
+        + kartoffelsalatKcalGesamt + hackfleischKcalGesamt);
   }
 }

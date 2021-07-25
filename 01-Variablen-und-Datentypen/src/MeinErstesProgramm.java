@@ -3,16 +3,66 @@
  */
 public class MeinErstesProgramm {
 
-  private static final int mehlMenge = 100;
-  private static final int kartoffeln = 1000;
-  private static final int pizza = 4;
-  private static final int spieße = 10;
-  private static final double salat = 221.60;
-  private static final double fleisch = 498.40;
+  public static void main(String[] args) {
+    String trennzeichen = "-".repeat(24);
 
-  public static void main(String[] args) {}
+    int mehl = 100;
+    int kartoffeln = 1000;
+    int tiefkuehlpizza = 4;
+    int grillspiesse = 10;
 
-  private static int berechneKalorien() {
-    return 0;
+    double kartoffelsalat = 221.60;
+    double hackfleisch = 498.40;
+
+    double mehlKcal = 364.0 / 100.0;
+    double kartoffelnKcal = 69.0 / 100.0;
+    double tiefkuehlpizzaKcal = 910.0;
+    double grillspiesseKcal = 169.0;
+    double kartoffelsalatKcal = 143.0 / 100.0;
+    double hackfleischKcal = 241.0 / 100.0;
+
+    double mehlKcalGesamt = mehl * mehlKcal;
+    double kartoffelnKcalGesamt = kartoffeln * kartoffelnKcal;
+    double tiefkuehlpizzaKcalGesamt = tiefkuehlpizza * tiefkuehlpizzaKcal;
+    double grillspiesseKcalGesamt = grillspiesse * grillspiesseKcal;
+    double kartoffelsalatKcalGesamt = kartoffelsalat * kartoffelsalatKcal;
+    double hackfleischKcalGesamt = hackfleisch * hackfleischKcal;
+
+    double kcalGesamt = berechneKalorien(
+      mehlKcalGesamt,
+      kartoffelnKcalGesamt,
+      tiefkuehlpizzaKcalGesamt,
+      grillspiesseKcalGesamt,
+      kartoffelsalatKcalGesamt,
+      hackfleischKcalGesamt
+    );
+
+    System.out.println("Einkaufsliste");
+    System.out.println(trennzeichen);
+    System.out.printf("%-15s = %d gr%n", "Mehl", mehl);
+    System.out.printf("%-15s = %d gr%n", "Kartoffeln", kartoffeln);
+    System.out.printf("%-15s = %d Stück%n", "Tiefkühlpizza", tiefkuehlpizza);
+    System.out.printf("%-15s = %d Stück%n", "Grillspiesse", grillspiesse);
+    System.out.printf("%-15s = %.2f gr%n", "Kartoffelsalat", kartoffelsalat);
+    System.out.printf("%-15s = %.2f gr%n", "Hackfleisch", hackfleisch);
+    System.out.println(trennzeichen);
+  }
+
+  private static double berechneKalorien(
+    double mehlKcalGesamt,
+    double kartoffelnKcalGesamt,
+    double tiefkuehlpizzaKcalGesamt,
+    double grillspiesseKcalGesamt,
+    double kartoffelsalatKcalGesamt,
+    double hackfleischKcalGesamt
+  ) {
+    return (
+      mehlKcalGesamt +
+      kartoffelnKcalGesamt +
+      tiefkuehlpizzaKcalGesamt +
+      grillspiesseKcalGesamt +
+      kartoffelsalatKcalGesamt +
+      hackfleischKcalGesamt
+    );
   }
 }

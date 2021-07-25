@@ -7,6 +7,6 @@ public class Kinokarte {
     String Film = "Star Wars";
     String Kinosaal = "04";
     int sitznummer = 0;
-    String name = "";
+    String name = "Tony";
   }
 }

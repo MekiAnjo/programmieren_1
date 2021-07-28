@@ -38,7 +38,7 @@ public class Arrays {
       zaehler++;
     }
 
-    double kcalGesamt = sumKcal(produktKcal);
+    double kcalGesamt = sumKcal(produktKcalGesamt);
 
     System.out.println("Einkaufsliste");
     System.out.println(trennzeichen);
@@ -46,14 +46,15 @@ public class Arrays {
     while (zaehler < produktName.length) {
       if (zaehler == 2 || zaehler == 3) {
         System.out.printf(
-          "%-15s = %d Stück%n",
+          "%-15s = %.0f Stück%n",
           produktName[zaehler],
           produktMenge[zaehler]
         );
+        zaehler++;
         continue;
       }
       System.out.printf(
-        "%-15s = %d gr%n",
+        "%-15s = %.0f gr%n",
         produktName[zaehler],
         produktMenge[zaehler]
       );
@@ -68,11 +69,11 @@ public class Arrays {
     System.out.println(trennzeichen);
 
     zaehler = 0;
-    while (zaehler < produktKcal.length) {
+    while (zaehler < produktKcalGesamt.length) {
       System.out.printf(
-        "%-15s = %.2f gr%n",
+        "%-15s = %.2f kcal%n",
         produktName[zaehler],
-        produktKcal[zaehler]
+        produktKcalGesamt[zaehler]
       );
       zaehler++;
     }
@@ -86,6 +87,7 @@ public class Arrays {
     int zaehler = 0;
     while (zaehler < array.length) {
       sum += array[zaehler];
+      zaehler++;
     }
     return sum;
   }

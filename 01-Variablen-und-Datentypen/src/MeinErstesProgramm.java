@@ -52,25 +52,25 @@ public class MeinErstesProgramm {
     System.out.println("Kalorien der Lebensmittel");
 
     System.out.println(trennzeichen);
-    System.out.printf("%-15s = %.2f gr%n", "Mehl", mehlKcalGesamt);
-    System.out.printf("%-15s = %.2f gr%n", "Kartoffeln", kartoffelnKcalGesamt);
+    System.out.printf("%-15s = %.2f kcal%n", "Mehl", mehlKcalGesamt);
+    System.out.printf("%-15s = %.2f kcal%n", "Kartoffeln", kartoffelnKcalGesamt);
     System.out.printf(
-      "%-15s = %.2f gr%n",
+      "%-15s = %.2f kcal%n",
       "Tiefkühlpizza",
       tiefkuehlpizzaKcalGesamt
     );
     System.out.printf(
-      "%-15s = %.2f gr%n",
+      "%-15s = %.2f kcal%n",
       "Grillspiesse",
       grillspiesseKcalGesamt
     );
     System.out.printf(
-      "%-15s = %.2f gr%n",
+      "%-15s = %.2f kcal%n",
       "Kartoffelsalat",
       kartoffelsalatKcalGesamt
     );
     System.out.printf(
-      "%-15s = %.2f gr%n",
+      "%-15s = %.2f kcal%n",
       "Hackfleisch",
       hackfleischKcalGesamt
     );

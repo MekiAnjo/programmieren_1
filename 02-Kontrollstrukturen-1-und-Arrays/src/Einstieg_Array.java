@@ -1,7 +1,7 @@
 /**
  * Arrays
  */
-public class Arrays {
+public class Einstieg_Array {
 
   public static void main(String[] args) {
     int[] meinArray1 = new int[5];

@@ -10,11 +10,25 @@ public class Schallplatte {
     this.interpreter = interpreter;
   }
 
+  public String getInterpreter() {
+    return this.interpreter;
+  }
+
   public String getTitle() {
     return this.title;
   }
 
-  public String getInterpreter() {
-    return this.interpreter;
+  @Override
+  public String toString() {
+    return (
+      "{" +
+      " title='" +
+      getTitle() +
+      "'" +
+      ", interpreter='" +
+      getInterpreter() +
+      "'" +
+      "}"
+    );
   }
 }

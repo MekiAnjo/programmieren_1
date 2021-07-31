@@ -1,6 +1,7 @@
 package aufgabe3;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 
 public class Main {
@@ -39,6 +40,36 @@ public class Main {
         }
       }
     );
+
+    // Gleiche wie oben nur als Lambda
+    Arrays.sort(
+      students,
+      (o1, o2) ->
+        ((Student) o1).getStudienfach()
+          .compareTo(((Student) o2).getStudienfach())
+    );
+
+    // Ohne unnötige Casts
+    Arrays.sort(
+      students,
+      (o1, o2) -> (o1).getStudienfach().compareTo((o2).getStudienfach())
+    );
+
+    // Beste Lösung?
+    Arrays.sort(students, Comparator.comparing(Student::getStudienfach));
+
+    // Basically gleiche Lösung nur für Listen
+    Collections.sort(
+      Arrays.asList(students),
+      Comparator.comparing(Student::getStudienfach)
+    );
+
+    // Geht auch, aber nicht so gut denke ich
+    students =
+      (Student[]) Arrays
+        .stream(students)
+        .sorted(Comparator.comparing(Student::getStudienfach))
+        .toArray();
 
     System.out.println();
     System.out.println("byStudiengang: ");

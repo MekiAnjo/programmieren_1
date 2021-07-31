@@ -6,9 +6,9 @@ import java.util.Comparator;
 
 public class Main {
 
+  @SuppressWarnings ("java:S1192") // unterdrückt Warnung des wiederholens von Informatik
   public static void main(String[] args) {
     Student[] students = new Student[6];
-
     students[0] = new Student("Tony Khoa Nam Huynh", 1003166, "Informatik");
     students[1] = new Student("Daniel Kom", 4596251, "Informatik");
     students[2] = new Student("Emre Gezer", 6634304, "Informatik");

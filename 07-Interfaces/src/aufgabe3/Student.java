@@ -63,17 +63,17 @@ public class Student {
   //   }
   // }
 
-  static class ByName<T> implements Comparator<T> {
-
-    @Override
-    public int compare(Object o1, Object o2) {
-      return ((Student) o1).getName().compareTo(((Student) o2).getName());
-    }
+  static class ByName<T extends Student> implements Comparator<T> {
 
     // @Override
-    // public int compare(T o1, T o2) {
-    //   return o1.getName().compareTo(o2.getName());
+    // public int compare(Object o1, Object o2) {
+    //   return ((Student) o1).getName().compareTo(((Student) o2).getName());
     // }
+
+    @Override
+    public int compare(T o1, T o2) {
+      return o1.getName().compareTo(o2.getName());
+    }
   }
 
   static class ByMatrikelNr implements Comparator {

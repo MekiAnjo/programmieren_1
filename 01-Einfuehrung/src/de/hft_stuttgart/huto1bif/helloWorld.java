@@ -1,3 +1,4 @@
+package de.hft_stuttgart.huto1bif;
 /**
  * helloWorld
  */

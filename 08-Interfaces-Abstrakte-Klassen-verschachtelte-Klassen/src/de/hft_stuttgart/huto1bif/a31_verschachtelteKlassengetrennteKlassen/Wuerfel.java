@@ -9,7 +9,8 @@ package de.hft_stuttgart.huto1bif.a31_verschachtelteKlassengetrennteKlassen;
  * @author rausch
  */
 public class Wuerfel {
-    public int calculate(){
-        return (int) (Math.random() * 6) + 1;
-    }
+
+  public int calculate() {
+    return (int) (Math.random() * 6) + 1;
+  }
 }

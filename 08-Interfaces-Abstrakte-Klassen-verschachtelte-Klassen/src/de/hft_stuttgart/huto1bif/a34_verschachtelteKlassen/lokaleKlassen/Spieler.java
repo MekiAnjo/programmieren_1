@@ -9,17 +9,21 @@ package de.hft_stuttgart.huto1bif.a34_verschachtelteKlassen.lokaleKlassen;
  * @author rausch
  */
 public class Spieler {
-    private String name;
-    public Spieler(String name) {
-        this.name = name;
+
+  private String name;
+
+  public Spieler(String name) {
+    this.name = name;
+  }
+
+  public String calculate() {
+    class Wuerfel {
+
+      public int calculate() {
+        return (int) (Math.random() * 6) + 1;
+      }
     }
-    public String calculate() {
-        class Wuerfel {
-            public int calculate() {
-                return (int) (Math.random() * 6) + 1;
-            }
-        }
-        Wuerfel wuerfel = new Wuerfel();
-        return name + ": " + wuerfel.calculate();
-    }
+    Wuerfel wuerfel = new Wuerfel();
+    return name + ": " + wuerfel.calculate();
+  }
 }

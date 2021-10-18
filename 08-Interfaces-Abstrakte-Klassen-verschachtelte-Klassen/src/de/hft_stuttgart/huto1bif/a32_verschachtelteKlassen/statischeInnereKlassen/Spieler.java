@@ -10,17 +10,21 @@ package de.hft_stuttgart.huto1bif.a32_verschachtelteKlassen.statischeInnereKlass
  * @author rausch
  */
 public class Spieler {
-    private String name;
-    public Spieler(String name) {
-        this.name = name;
-    }
-    public String calculate(){
-        return name + ": " + Wuerfel.calculate();
-    }
 
-     static public class Wuerfel {
-        static public int calculate() {
-            return (int) (Math.random() * 6) + 1;
-        }
+  private String name;
+
+  public Spieler(String name) {
+    this.name = name;
+  }
+
+  public String calculate() {
+    return name + ": " + Wuerfel.calculate();
+  }
+
+  public static class Wuerfel {
+
+    public static int calculate() {
+      return (int) (Math.random() * 6) + 1;
     }
+  }
 }

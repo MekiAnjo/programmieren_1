@@ -10,11 +10,11 @@ package de.hft_stuttgart.huto1bif.a32_verschachtelteKlassen.statischeInnereKlass
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Spieler spieler = new Spieler("Max");
-        System.out.println(spieler.calculate());
-    }
+  /**
+   * @param args the command line arguments
+   */
+  public static void main(String[] args) {
+    Spieler spieler = new Spieler("Max");
+    System.out.println(spieler.calculate());
+  }
 }

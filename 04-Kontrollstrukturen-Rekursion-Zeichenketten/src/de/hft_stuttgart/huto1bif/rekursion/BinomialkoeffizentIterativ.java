@@ -8,7 +8,7 @@ public class BinomialkoeffizentIterativ {
 
     int zaehler = fakultaet(n);
     int nenner = fakultaet(k) * fakultaet(n - k);
-    System.out.println(n + " �ber " + k + " = " + zaehler / nenner);
+    System.out.println(n + " über " + k + " = " + zaehler / nenner);
   }
 
   private static int fakultaet(int n) {

@@ -19,5 +19,7 @@ public class CharacterString {
     System.out.println(
       "Anzahl der Zeichen " + buchstabe + ": " + anzahlBuchstabe
     );
+
+    scanner.close();
   }
 }

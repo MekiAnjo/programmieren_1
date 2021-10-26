@@ -8,7 +8,7 @@ public class BinomialkoeffizentRekursiv {
 
     int bk = binKoeff(n, k);
 
-    System.out.println(n + " über " + k + " = " + bk);
+    System.out.println(n + " �ber " + k + " = " + bk);
   }
 
   private static int binKoeff(int n, int k) {

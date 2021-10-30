@@ -16,11 +16,7 @@ public class SatzOhneVokale {
     for (int i = 0; i < satz.length(); i++) {
       Character zeichen = satz.charAt(i);
       switch (Character.toLowerCase(zeichen)) {
-        case 'a':
-        case 'e':
-        case 'i':
-        case 'o':
-        case 'u':
+        case 'a', 'e', 'i', 'o', 'u':
           break;
         default:
           System.out.print(zeichen);

@@ -23,7 +23,7 @@ public class TextAnalyseLambda {
     Map<String, Long> charCount = Stream
       .of(satz.split(""))
       // .map(x -> x = x.substring(0, 0))
-      .filter(x -> x.charAt(0) > 'a' || x.charAt(0) < 'z')
+      // .filter(x -> x.charAt(0) > 'a' || x.charAt(0) < 'z')
       .collect(
         Collectors.groupingBy(Function.identity(), Collectors.counting())
       );
@@ -32,14 +32,9 @@ public class TextAnalyseLambda {
 
     charCount
       .entrySet()
-      .forEach(entry -> {
-        // if (
-        //   entry.getKey().isBlank() ||
-        //   entry.getKey().equals(".") ||
-        //   entry.getKey().isEmpty()
-        // ) return;
-        System.out.println(entry.getKey() + ": \t" + entry.getValue());
-      });
+      .forEach(entry ->
+        System.out.println(entry.getKey() + ": \t" + entry.getValue())
+      );
     Long sum = charCount.values().stream().reduce(0L, (x, y) -> x + y);
     charCount.values().stream().forEach(System.out::println);
     System.out.println("Summe: \t" + sum);

@@ -3,7 +3,6 @@ package de.hft_stuttgart.huto1bif.zeichenketten;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -22,8 +21,7 @@ public class TextAnalyseLambda {
 
     Map<String, Long> charCount = Stream
       .of(satz.split(""))
-      // .map(x -> x = x.substring(0, 0))
-      // .filter(x -> x.charAt(0) > 'a' || x.charAt(0) < 'z')
+      .filter(x -> x.charAt(0) > 'a' || x.charAt(0) < 'z')
       .collect(
         Collectors.groupingBy(Function.identity(), Collectors.counting())
       );

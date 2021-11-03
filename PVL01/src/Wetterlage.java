@@ -18,7 +18,12 @@ public class Wetterlage {
       } else {
         wetterlage = "Sonne";
       }
-      System.out.printf("Tag %d: %.1f%%, %s%n", i + 1, regen[i] * 100, wetterlage);
+      System.out.printf(
+        "Tag %d: %.1f%%, %s%n",
+        i + 1,
+        regen[i] * 100,
+        wetterlage
+      );
     }
   }
 }

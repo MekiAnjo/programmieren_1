@@ -34,7 +34,7 @@ public class Kiste {
           String title = sc.nextLine();
           System.out.print("Interpreter: ");
           String interpreter = sc.nextLine();
-          schallplattHinzufuegen(title, interpreter);
+          schallplatteHinzufuegen(title, interpreter);
         }
         case 2 -> kistenInhaltAuflisten();
         case 3 -> {
@@ -54,7 +54,7 @@ public class Kiste {
     sc.close();
   }
 
-  static void schallplattHinzufuegen(String titel, String interpreter) {
+  static void schallplatteHinzufuegen(String titel, String interpreter) {
     if (anzahlSchallplatten >= spArr.length) {
       System.out.println(
         "Die Kiste ist voll, es müssen erst wieder Platten entfernt werden"

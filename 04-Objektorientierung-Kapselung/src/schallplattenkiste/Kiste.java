@@ -23,7 +23,7 @@ public class Kiste {
     while (isProgrammRunning) {
       System.out.print("Auswahl: ");
       int eingabe = sc.nextInt();
-      sc.nextLine();
+      sc.nextLine(); // exists so that the return character gets consumed
 
       switch (eingabe) {
         case 1 -> {

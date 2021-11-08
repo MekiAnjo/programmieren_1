@@ -28,6 +28,7 @@ public class Main {
       );
       System.out.print("Auswahl: ");
       int input = sc.nextInt();
+      sc.nextLine();
 
       switch (input) {
         case 1 -> {

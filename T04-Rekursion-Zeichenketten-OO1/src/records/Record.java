@@ -20,6 +20,6 @@ public class Record {
 
   @Override
   public String toString() {
-    return "Record [artist=" + artist + ", title=" + title + "]";
+    return "[title=" + title + ", artist=" + artist + "]";
   }
 }

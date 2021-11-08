@@ -2,8 +2,12 @@ package records;
 
 public class RecordBox {
 
-  private Record[] recordStorage = new Record[10];
+  private Record[] recordStorage;
   private static int index = 0;
+
+  public RecordBox() {
+    recordStorage = new Record[10];
+  }
 
   public void addRecord(Record record) {
     if (isFull()) {

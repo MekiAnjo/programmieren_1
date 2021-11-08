@@ -3,12 +3,12 @@ package kapselung;
 public class Cat {
 
   private int mood = 50;
-  private int hungry = 50;
-  private int energy = 50;
+  private int hungerLevel = 50;
+  private int energyLevel = 50;
 
   public void feed() {
     System.out.println("Feed ...");
-    hungry--;
+    hungerLevel--;
     mood++;
     meow();
   }
@@ -17,12 +17,12 @@ public class Cat {
     return this.mood;
   }
 
-  public int getHungry() {
-    return this.hungry;
+  public int getHungerLevel() {
+    return this.hungerLevel;
   }
 
-  public int getEnergy() {
-    return this.energy;
+  public int getEnergyLevel() {
+    return this.energyLevel;
   }
 
   private void meow() {
@@ -32,13 +32,13 @@ public class Cat {
   public void play() {
     System.out.println("Play ...");
     mood++;
-    energy--;
+    energyLevel--;
     meow();
   }
 
   public void sleep() {
     System.out.println("Sleep ...");
-    energy++;
-    hungry++;
+    energyLevel++;
+    hungerLevel++;
   }
 }

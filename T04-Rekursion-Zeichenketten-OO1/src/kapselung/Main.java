@@ -8,8 +8,8 @@ public class Main {
     cat.feed();
     cat.play();
     cat.sleep();
-    System.out.println(cat.getEnergy());
-    System.out.println(cat.getHungry());
+    System.out.println(cat.getEnergyLevel());
+    System.out.println(cat.getHungerLevel());
     System.out.println(cat.getMood());
   }
 }

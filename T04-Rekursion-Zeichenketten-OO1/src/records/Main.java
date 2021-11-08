@@ -28,7 +28,7 @@ public class Main {
       );
       System.out.print("Auswahl: ");
       int input = sc.nextInt();
-      sc.nextLine();
+      sc.nextLine(); // exist so it can consume the return character
 
       switch (input) {
         case 1 -> {

@@ -33,7 +33,7 @@ public class Main {
     int kundennummer = Integer.parseInt(input);
     System.out.println(TRENN_STRING);
     System.out.println("Rechung vom:\t" + alex.getRechnung().getDate());
-    System.out.println("Ihre Kunden-Nr:\t" + kundennummer);
+    System.out.println("Ihre Kunden-Nr:\t" + alex.getKundennummer());
     System.out.println(
       "Rechnungs-Nr:\t" + alex.getRechnung().getRechnungsNummer()
     );

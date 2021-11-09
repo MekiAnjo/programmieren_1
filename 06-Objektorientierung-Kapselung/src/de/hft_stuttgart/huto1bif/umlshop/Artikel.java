@@ -1,4 +1,4 @@
-package de.hft_stuttgart.huto1bif.umlshop;
+package de.hft_stuttgart.huto1bif.umlShop;
 
 public class Artikel implements MyRandom {
 

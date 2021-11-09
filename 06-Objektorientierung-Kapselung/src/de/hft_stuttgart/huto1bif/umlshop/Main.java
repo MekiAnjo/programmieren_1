@@ -1,4 +1,4 @@
-package de.hft_stuttgart.huto1bif.umlshop;
+package de.hft_stuttgart.huto1bif.umlShop;
 
 import java.util.Date;
 import java.util.Scanner;

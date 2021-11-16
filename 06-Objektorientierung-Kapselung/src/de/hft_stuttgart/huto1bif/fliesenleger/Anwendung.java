@@ -35,7 +35,7 @@ public class Anwendung {
     System.out.println(
       "Insgesamt werden " +
       bodenFlaeche.anzahlFliesen(fliese) +
-      " Fliesen ben�tigt"
+      " Fliesen benötigt"
     );
 
     scanner.close();

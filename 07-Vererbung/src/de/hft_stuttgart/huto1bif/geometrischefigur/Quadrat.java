@@ -1,4 +1,4 @@
-package de.hft_stuttgart.huto1bif.aufgabe_7_2;
+package de.hft_stuttgart.huto1bif.geometrischefigur;
 
 /**
  * Quadrat

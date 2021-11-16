@@ -3,29 +3,17 @@ package de.hft_stuttgart.huto1bif.aufgabe_7_2;
 /**
  * Quadrat
  */
-public class Quadrat extends GeometrischeFigur {
+public class Quadrat extends Figur {
 
-  private double a;
+  private final double seitenlaenge;
 
-  public Quadrat(Koordinate anker, double a) {
-    super(anker);
-    this.a = a;
+  Quadrat(double seitenlaenge) {
+    super("Quadrat");
+    this.seitenlaenge = seitenlaenge;
   }
 
-  @Override
-  public double berechneUmfang() {
-    return 4 * a;
-  }
-
-  @Override
-  public String toString() {
-    return (
-      super.toString() +
-      " [a=" +
-      a +
-      "]" +
-      " d=" +
-      anker.berechneAbstandzumUrsprung()
-    );
+  Quadrat(double seitenlaenge, Koordinate anker) {
+    super("Quadrat", anker);
+    this.seitenlaenge = seitenlaenge;
   }
 }

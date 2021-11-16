@@ -3,35 +3,17 @@ package de.hft_stuttgart.huto1bif.aufgabe_7_2;
 /**
  * Dreieck
  */
-public class Dreieck extends GeometrischeFigur {
+public class Dreieck extends Figur {
 
-  private double a, b, c;
+  private final double seitenlaenge;
 
-  public Dreieck(Koordinate anker, double a, double b, double c) {
-    super(anker);
-    this.a = a;
-    this.b = b;
-    this.c = c;
+  Dreieck(double seitenlaenge) {
+    super("Dreieck");
+    this.seitenlaenge = seitenlaenge;
   }
 
-  @Override
-  public double berechneUmfang() {
-    return a + b + c;
-  }
-
-  @Override
-  public String toString() {
-    return (
-      super.toString() +
-      " [a=" +
-      a +
-      ", b=" +
-      b +
-      ", c=" +
-      c +
-      "]" +
-      " d=" +
-      anker.berechneAbstandzumUrsprung()
-    );
+  Dreieck(double seitenlaenge, Koordinate anker) {
+    super("Dreieck", anker);
+    this.seitenlaenge = seitenlaenge;
   }
 }

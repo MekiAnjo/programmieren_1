@@ -1,6 +1,7 @@
 package de.hft_stuttgart.huto1bif.aufgabe_7_2;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * Main
@@ -17,7 +18,11 @@ public class Main {
     System.out.println(Arrays.toString(geoFig));
 
     System.out.println("Absteigend sortiert");
-    Arrays.sort(geoFig);
+    Arrays.sort(
+      geoFig,
+      Comparator.comparing(GeometrischeFigur::berechneUmfang)
+    );
+    // Arrays.sort(geoFig);
     System.out.println(Arrays.toString(geoFig));
 
     System.out.println("Aufsteigend sortiert");

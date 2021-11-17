@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 public class Main {
 
-  @SuppressWarnings ("java:S1192") // unterdrückt Warnung des wiederholens von Informatik
+  @SuppressWarnings("java:S1192") // unterdrückt Warnung des wiederholens von Informatik
   public static void main(String[] args) {
     Student[] students = new Student[6];
     students[0] = new Student("Tony Khoa Nam Huynh", 1003166, "Informatik");
@@ -63,13 +63,6 @@ public class Main {
       Arrays.asList(students),
       Comparator.comparing(Student::getStudienfach)
     );
-
-    // Geht auch, aber nicht so gut denke ich
-    students =
-      (Student[]) Arrays
-        .stream(students)
-        .sorted(Comparator.comparing(Student::getStudienfach))
-        .toArray();
 
     System.out.println();
     System.out.println("byStudiengang: ");

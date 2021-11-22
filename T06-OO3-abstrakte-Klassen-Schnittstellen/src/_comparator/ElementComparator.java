@@ -2,10 +2,10 @@ package _comparator;
 
 import java.util.Comparator;
 
-public class ElementComparator<T extends Element> implements Comparator<T> {
+public class ElementComparator implements Comparator<Element> {
 
   @Override
-  public int compare(T o1, T o2) {
+  public int compare(Element o1, Element o2) {
     return Integer.compare(o1.getAtomicNumber(), o2.getAtomicNumber());
   }
 }

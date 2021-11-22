@@ -72,16 +72,9 @@ public class Element {
       oxygen,
     };
     // 1. Solution
-    // Arrays.sort(toxicMixture, new ElementComparator()/** U add this **/);
+    Arrays.sort(toxicMixture, new ElementComparator()/** U add this **/);
 
     // 2. Solution
-    Arrays.sort(
-      toxicMixture,
-      new ElementComparator<Element>()
-      /** U add this **/
-    );
-
-    // 3. Solution
     Arrays.sort(toxicMixture, Comparator.comparing(Element::getAtomicNumber));
 
     for (Element element : toxicMixture) {

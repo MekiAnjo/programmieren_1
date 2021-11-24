@@ -1,19 +1,34 @@
 package de.hft_stuttgart.huto1bif.wiederholung_arrays.kleiderschrank;
 
-import static de.hft_stuttgart.huto1bif.wiederholung_arrays.kleiderschrank.Kleidung.Color.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Kleiderschrank {
 
-  public static void main(String[] args) {
-    Kleidung[] kleider = new Kleidung[] {
-      new Pulli(BLUE, 42),
-      new Pulli(BLUE, 42),
-    };
+  List<Kleidung> wardrobe = new ArrayList<>();
 
-    for (Kleidung kleidung : kleider) {
+  public void addKleidung(Kleidung kleidung) {
+    if (!isUnique(kleidung)) {
+      System.out.println(
+        "Dieses Kleidungsstück existiert bereits im Kleiderschrank"
+      );
+      return;
+    }
+    wardrobe.add(kleidung);
+  }
+
+  public void printInventory() {
+    for (Kleidung kleidung : wardrobe) {
       System.out.println(kleidung);
     }
+  }
 
-    System.out.println(kleider[0].equals(kleider[1]));
+  public boolean isUnique(Kleidung kleidung) {
+    for (Kleidung listCloth : this.wardrobe) {
+      if (listCloth.equals(kleidung)) {
+        return false;
+      }
+    }
+    return true;
   }
 }

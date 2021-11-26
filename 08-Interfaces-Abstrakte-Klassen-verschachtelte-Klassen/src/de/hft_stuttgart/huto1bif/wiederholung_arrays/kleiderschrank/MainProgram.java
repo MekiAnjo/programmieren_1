@@ -38,7 +38,7 @@ public class MainProgram {
     System.out.println(
       "1: Schrankinventar ausgeben | 2: Kleidung hinzufügen | 3: Program beeneden"
     );
-    System.out.println("Gebe bitte ein Zahl ein");
+    System.out.println("Gebe bitte eine Zahl ein");
   }
 
   private static void hinzufuegenKleidung() {

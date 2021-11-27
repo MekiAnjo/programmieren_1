@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author rausch
  */
-public class StudentenvergleichMitComparator {
+public class Studentenvergleich {
 
   /**
    * @param args the command line arguments

@@ -11,11 +11,18 @@ public class Application {
     };
 
     for (GeometricShape geometricShape : shapes) {
-      if (geometricShape instanceof ShapeWithArea) {
+      // if (geometricShape instanceof ShapeWithArea) {
+      //   System.out.printf(
+      //     "%s. Meine Fläche ist: %.2f\n",
+      //     geometricShape,
+      //     ((ShapeWithArea) geometricShape).computeArea()
+      //   );
+      // }
+      if (geometricShape instanceof ShapeWithArea shape) {
         System.out.printf(
-          "%s. Meine Fl�che ist: %.2f\n",
-          geometricShape,
-          ((ShapeWithArea) geometricShape).computeArea()
+          "%s. Meine Fläche ist: %.2f%n",
+          shape,
+          shape.computeArea()
         );
       }
     }

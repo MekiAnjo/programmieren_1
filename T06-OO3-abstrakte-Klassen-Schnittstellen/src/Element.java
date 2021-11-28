@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Element {
 
@@ -68,7 +69,11 @@ public class Element {
       platinum,
       oxygen,
     };
+    // * 1. Solution
     Arrays.sort(toxicMixture, new ElementComparator()/** U add this **/);
+    
+    // * 2. Solution
+    Arrays.sort(toxicMixture, Comparator.comparing(Element::getAtomicNumber));
 
     for (Element element : toxicMixture) {
       System.out.println(element + "\n");

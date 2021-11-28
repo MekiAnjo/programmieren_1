@@ -1,7 +1,4 @@
-package _comparator;
-
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Element {
 
@@ -56,7 +53,7 @@ public class Element {
   public static void main(String[] args) {
     Element hydrogen = new Element("Wasserstoff", 1, 1.0, false);
     Element uranium = new Element("Uran", 92, 238.02891, true);
-    Element molybdenum = new Element("Molybdän", 42, 95.95, false);
+    Element molybdenum = new Element("Molybd�n", 42, 95.95, false);
     Element calcium = new Element("Calcium", 20, 40.078, false);
     Element actinium = new Element("Actinium", 89, 227.0, true);
     Element platinum = new Element("Platin", 78, 195.084, false);
@@ -71,11 +68,7 @@ public class Element {
       platinum,
       oxygen,
     };
-    // 1. Solution
     Arrays.sort(toxicMixture, new ElementComparator()/** U add this **/);
-
-    // 2. Solution
-    Arrays.sort(toxicMixture, Comparator.comparing(Element::getAtomicNumber));
 
     for (Element element : toxicMixture) {
       System.out.println(element + "\n");

@@ -33,8 +33,4 @@ public class Zufallsgenerator_Map {
 
     System.out.println(map);
   }
-
-  private static Integer wuerfeln() {
-    return RAND.nextInt(MAX_DIGIT_OF_WUERFEL) + 1;
-  }
 }

@@ -32,13 +32,14 @@ public class Student {
     );
   }
 
-  public static Comparator getCompareByNachname() {
-    return new Comparator() {
-      @Override
-      public int compare(Object o1, Object o2) {
-        return ((Student) o1).name.compareTo(((Student) o2).name);
-      }
-    };
+  public static Comparator<Student> getCompareByNachname() {
+    // return new Comparator() {
+    //   @Override
+    //   public int compare(Object o1, Object o2) {
+    //     return ((Student) o1).name.compareTo(((Student) o2).name);
+    //   }
+    // };
+    return (o1, o2) -> o1.name.compareTo(o2.name);
   }
 
   public static Comparator getCompareByVorname() {

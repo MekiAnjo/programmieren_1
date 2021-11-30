@@ -9,6 +9,8 @@ public class RandomIterator implements Iterator<Integer> {
   private final Random random = new Random();
   private final int bound;
 
+  //Konstruktor für Iterator
+
   public RandomIterator(int bound) {
     this.bound = bound;
   }
@@ -21,6 +23,6 @@ public class RandomIterator implements Iterator<Integer> {
   @Override
   public Integer next() {
     if (!hasNext()) throw new NoSuchElementException();
-    return random.nextInt(bound);
+    return random.nextInt(bound); // 0 inklusive, bound exklusive
   }
 }

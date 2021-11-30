@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Studentenvergleich {
 
   public static void main(String[] args) {
-    Student studenten[] = new Student[6];
+    Student[] studenten = new Student[6];
     studenten[0] = new Student("Baur", "Melanie", "INF", 42);
     studenten[1] = new Student("Speiser", "Sebastian", "INF", 43);
     studenten[2] = new Student("Rausch", "Alexander", "WINF", 44);
@@ -27,7 +27,7 @@ public class Studentenvergleich {
     Character c = scanner.next().charAt(0);
     System.out.println("c = " + c);
 
-    Comparator comparator =
+    Comparator<Student> comparator =
       switch (c) {
         case '1' -> Student.getCompareByNachname();
         case '2' -> Student.getCompareByVorname();
@@ -44,5 +44,7 @@ public class Studentenvergleich {
     for (Student s : studenten) {
       System.out.println(s);
     }
+
+    scanner.close();
   }
 }

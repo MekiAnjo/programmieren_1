@@ -9,7 +9,14 @@ public class Spieler {
   }
 
   public String calculate() {
-    Wuerfel wuerfel = new Wuerfel();
-    return name + ": " + wuerfel.calculate();
+    // ZufallsZahl rand = new ZufallsZahl() {
+    //   @Override
+    //   public int random() {
+    //     return (int) (Math.random() * 6) + 1;
+    //   }
+    // };
+    ZufallsZahl rand = () -> (int) (Math.random() * 6) + 1;
+
+    return (name + ": " + rand.random());
   }
 }

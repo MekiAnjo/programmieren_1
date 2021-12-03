@@ -12,4 +12,12 @@ public class Spieler {
     Wuerfel wuerfel = new Wuerfel();
     return name + ": " + wuerfel.calculate();
   }
+
+  public class Wuerfel {
+
+    public int calculate() {
+      return (int) (Math.random() * 6) + 1;
+    }
+  }
+  
 }

@@ -9,12 +9,12 @@ public class MathSet {
   private Set<Character> elements;
 
   public MathSet(Character... elements) {
-    this.elements = new HashSet<Character>();
+    this.elements = new HashSet<>();
     this.elements.addAll(Arrays.asList(elements));
   }
 
   MathSet(Set<Character> set) {
-    this.elements = new HashSet<Character>();
+    this.elements = new HashSet<>();
     this.elements.addAll(set);
   }
 

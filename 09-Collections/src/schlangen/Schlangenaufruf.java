@@ -8,9 +8,9 @@ public class Schlangenaufruf {
     FzDeque l = new FzDeque("L1", "L2", "L3");
 
     FzDeque faehre = faehreAufladen(a, b, l);
-    System.out.println("F�hre ist aufgeladen: " + faehre);
+    System.out.println("Fähre ist aufgeladen: " + faehre);
     faehreAbladen(faehre);
-    System.out.println("F�hre ist abgeladen.");
+    System.out.println("Fähre ist abgeladen.");
   }
 
   private static void faehreAbladen(FzDeque faehre) {

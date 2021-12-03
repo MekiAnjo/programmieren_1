@@ -3,24 +3,36 @@ package ratespiel;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Ratespiel_V1 {
+public class Ratespiel_V2 {
 
   private static final Random RAND = new Random();
   private static final Scanner SCAN = new Scanner(System.in);
   private static final int UPPER_BOUND = 100;
 
   public static void main(String[] args) {
-    int randomNumber = getRandomNumber();
-    int userInput = 0;
-    int counter = 0;
-    System.out.println("Zu erratene Zahl: " + randomNumber);
+    boolean isRunning = true;
 
     do {
-      System.out.print("Deine Eingabe: ");
-      userInput = SCAN.nextInt();
-      counter++;
-    } while (checkNumber(userInput, randomNumber));
-    System.out.println("Anzahl der Versuche: " + counter);
+      // Initialize Game
+      int randomNumber = getRandomNumber();
+      int userInput = 0;
+      int counter = 0;
+      System.out.println("Zu erratene Zahl: " + randomNumber);
+
+      do {
+        System.out.print("Deine Eingabe: ");
+        userInput = SCAN.nextInt();
+        counter++;
+      } while (checkNumber(userInput, randomNumber));
+
+      System.out.println("Anzahl der Versuche: " + counter);
+      System.out.println("Nochmal spielen? [Y/N]");
+      String decision = SCAN.next();
+      if (decision.equalsIgnoreCase("N")) {
+        isRunning = false;
+      }
+    } while (isRunning);
+    System.out.println("Bye");
   }
 
   private static int getRandomNumber() {

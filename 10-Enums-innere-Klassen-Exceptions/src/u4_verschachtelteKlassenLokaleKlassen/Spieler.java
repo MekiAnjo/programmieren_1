@@ -9,7 +9,19 @@ public class Spieler {
   }
 
   public String calculate() {
+    class Wuerfel {
+
+      public int calculate() {
+        return (int) (Math.random() * 6) + 1;
+      }
+    }
     Wuerfel wuerfel = new Wuerfel();
     return name + ": " + wuerfel.calculate();
   }
+  // public class Wuerfel {
+
+  //   public int calculate() {
+  //     return (int) (Math.random() * 6) + 1;
+  //   }
+  // }
 }

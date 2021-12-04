@@ -15,17 +15,17 @@ public class StudentenvergleichMitComparator {
     studenten[4] = new Student("Knauth", "Stefan", "INF", 48);
     studenten[5] = new Student("Mosler", "Christof", "WINF", 47);
 
-    System.out.println("W�hlen Sie ...");
+    System.out.println("Wählen Sie ...");
     System.out.println("1 - Nachname");
     System.out.println("2 - Vorname");
     System.out.println("3 - Studiengang");
     System.out.println("4 - Matrikelnummer");
     System.out.println("0 - Programmende");
 
-    System.out.print("Bitte w�hlen Sie nun Ihre Eingabe: ");
+    System.out.print("Bitte wählen Sie nun Ihre Eingabe: ");
     Scanner scanner = new Scanner(System.in);
     Integer eingabe = scanner.nextInt();
-    System.out.println("Ihre ausgew�hlte Eingabe ist: " + eingabe);
+    System.out.println("Ihre ausgewählte Eingabe ist: " + eingabe);
     scanner.close();
 
     Comparator<Student> comparator = null;

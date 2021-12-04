@@ -1,9 +1,8 @@
 package de.hft_stuttgart.huto1bif.a1_tiere;
 
-public class Anwendung {
+public class Tierverwaltung {
 
   public static void main(String[] args) {
-    int ldfNr = 1;
     Tier meineTiere[] = new Tier[] {
       new Hund("Bello"),
       new Hund("Hasso"),
@@ -12,10 +11,15 @@ public class Anwendung {
     };
 
     for (Tier tier : meineTiere) {
-      if (tier instanceof Haustier) {
-        ((Haustier) tier).setMarke(ldfNr++);
-      }
       System.out.println(tier);
+    }
+
+    System.out.println(); // Leerzeile
+
+    for (Tier tier : meineTiere) {
+      if (tier instanceof Haustier haustier) {
+        haustier.womitFuettern();
+      }
     }
   }
 }

@@ -15,8 +15,21 @@ public class Spieler {
     //     return (int) (Math.random() * 6) + 1;
     //   }
     // };
-    ZufallsZahl rand = () -> (int) (Math.random() * 6) + 1;
 
-    return (name + ": " + rand.random());
+    // ZufallsZahl rand = () -> (int) (Math.random() * 6) + 1;
+
+    // return (name + ": " + rand.random());
+
+    return (
+      name +
+      ": " +
+      (
+        new ZufallsZahl() {
+          public int random() {
+            return (int) (Math.random() * 6) + 1;
+          }
+        }
+      ).random()
+    );
   }
 }

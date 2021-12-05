@@ -1,0 +1,28 @@
+1. HashMap: Name der Währung könnte z.B. Key sein, der Umrechnungskurs der Value
+
+2. Hierfür würde sich eine Queue (FIFIO - First In, First Out - eignen), da
+   die Terminreihenfolge beim Patientenaufruf natürlich beachtet werden sollte.
+   Nimmt man die Aufgabe ganz genau, wäre eine Priority-Queue (sog. Vorrangwarteschlange)
+   am besten geeignet, da man dann auch Triage umsetzen könnte (Triage -> z.B. wenn Notfälle
+   in der Ambulanz eines Krankenhauses schneller aufgerufen und behandelt werden)
+
+3. Name und E-Mail-Adresse könnten in einer HashMap gespeichert werden, mit der E-Mail-Adresse als
+   Key (da einzigartig) und dem Namen als Value
+
+4. Das Warenlager funktioniert in dem beschriebenen Fall nach dem LIFO-Prinzip (Last In, First Out),
+   daher könnte eine LinkedList verwendet werden, von der jeweils das hinterste Element wieder als
+   erstes entfernt wird. Am besten passt in diesem Kontext vermutlich jedoch die Datenstruktur Stack
+   (siehe Tutoriumsfolien).
+
+5. Da jede Kegelrobbe einzigartig ist, würde hier ein Set passen.
+
+6. Hier kommt es sehr stark darauf an, welche Informationen vom 80-Jährigen notiert werden. Notiert 
+   er sich nur die Kennzeichen in Form einer Liste, wären bspw. LinkedList und ArrayList geeignet. 
+   Notiert der Rentner neben dem Kennzeichen jedoch auch die Uhrzeit, wäre eine HashMap mit dem Kennzeichen 
+   als Key und der Uhrzeit als Value möglich.
+
+7. Hier passt eine Set-Implementierung (z.B. HashSet), da die Reihenfolge keine Rolle spielt
+   und jeder User nur einmal vorkommt.
+
+8. Das beschriebene Szenario ließe sich sehr gut mit einer ArrayList umsetzen; der Index entspricht dann der 
+   Mitgliedsnummer. Natürlich sind auch andere Strukturen wie HashMap denkbar.

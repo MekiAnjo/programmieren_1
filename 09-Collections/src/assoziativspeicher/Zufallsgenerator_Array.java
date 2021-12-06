@@ -1,7 +1,6 @@
 package assoziativspeicher;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class Zufallsgenerator_Array {
 

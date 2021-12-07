@@ -41,15 +41,17 @@ public class Main {
       }
     );
 
-    // Gleiche wie oben nur als Lambda
     Arrays.sort(
       students,
-      (o1, o2) ->
-        ((Student) o1).getStudienfach()
-          .compareTo(((Student) o2).getStudienfach())
+      new Comparator<Student>() {
+        @Override
+        public int compare(Student o1, Student o2) {
+          return o1.getStudienfach().compareTo(o2.getStudienfach());
+        }
+      }
     );
 
-    // Ohne unnötige Casts
+    // Gleiche wie oben nur als Lambda
     Arrays.sort(
       students,
       (o1, o2) -> (o1).getStudienfach().compareTo((o2).getStudienfach())

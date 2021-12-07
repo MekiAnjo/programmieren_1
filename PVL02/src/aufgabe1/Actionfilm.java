@@ -17,7 +17,12 @@ public class Actionfilm extends Film {
   @Override
   public String getFilmInfo() {
     return (
-      "Name: " + name + ", Filmlänge: " + laenge + ", Variante: " + dimension
+      "Name: " +
+      name +
+      ", Filmlänge: " +
+      laenge +
+      " Min, Variante: " +
+      dimension
     );
   }
 }

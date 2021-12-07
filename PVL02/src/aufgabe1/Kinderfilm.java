@@ -17,7 +17,12 @@ public class Kinderfilm extends Film {
   @Override
   public String getFilmInfo() {
     return (
-      "Name: " + name + ", Filmlänge: " + laenge + ", Animation: " + animation
+      "Name: " +
+      name +
+      ", Filmlänge: " +
+      laenge +
+      " Min, Animation: " +
+      animation
     );
   }
 }

@@ -21,6 +21,6 @@ public class KinoBesucherIn {
     eintrittspreis = (ermaessigt) ? film.getPreis() - 2.50 : film.getPreis();
     System.out.println(film.getFilmInfo());
     System.out.printf("Der Eintrittspreis beträgt: %.2f€%n", eintrittspreis);
-    System.out.println("Viel Spaß");
+    System.out.println("Viel Spaß!");
   }
 }

@@ -19,6 +19,7 @@ public class Main {
     System.out.println(Arrays.toString(students));
 
     Arrays.sort(students, new Student.ByMatrikelNr());
+    Arrays.sort(students, new Student.ByMatrikelNr2());
 
     System.out.println();
     System.out.println("byMatrikelnummer: ");

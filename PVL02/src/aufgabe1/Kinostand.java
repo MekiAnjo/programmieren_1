@@ -9,11 +9,11 @@ public class Kinostand {
     KinoBesucherIn johnny = new KinoBesucherIn("Johnny", 9, true);
     KinoBesucherIn harry = new KinoBesucherIn("Harry", 11, true);
     KinoBesucherIn alex = new KinoBesucherIn("Alex", 24, false);
-    KinoBesucherIn thomas = new KinoBesucherIn("Thomas", 15, false);
+    KinoBesucherIn isa = new KinoBesucherIn("Isa", 15, false);
 
     johnny.filmBesuchen(dune);
     harry.filmBesuchen(frozen);
     alex.filmBesuchen(dune);
-    thomas.filmBesuchen(frozen);
+    isa.filmBesuchen(frozen);
   }
 }

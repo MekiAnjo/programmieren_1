@@ -12,6 +12,7 @@ public class Actionfilm extends Film {
   ) {
     super(name, laenge, altersbeschraenkung);
     this.preis = (dimension.equals("3D") ? preis + 3.00 : preis);
+    this.dimension = dimension;
   }
 
   @Override

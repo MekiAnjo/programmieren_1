@@ -12,7 +12,10 @@ public abstract class App implements Comparable<App> {
 
   @Override
   public int compareTo(App o) {
+    // kleinster an erster Stelle
     return (int) (this.speicherplatzverbrauch - o.speicherplatzverbrauch);
+    // größter an erster Stelle
+    // return (int) (o.speicherplatzverbrauch - this.speicherplatzverbrauch);
   }
 
   public abstract String installieren();

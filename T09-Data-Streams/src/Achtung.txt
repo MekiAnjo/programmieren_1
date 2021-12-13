@@ -1,0 +1,3 @@
+Die Klassen Article und TanteEmmaLaden waren nicht Bestandteil der Übung und dienen lediglich als Beispiel dafür, wie man Attribute von Objekten in
+Textdateien speichern kann. Das Programm ist auch nur prototypisch und es werden keinerlei Fehlerfälle behandelt, das Speichern und Auslesen der Attribute
+funktioniert jedoch

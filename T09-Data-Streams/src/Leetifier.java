@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 
 public class Leetifier {
 
@@ -17,7 +18,7 @@ public class Leetifier {
 
     try (
       BufferedReader reader = new BufferedReader(
-        new InputStreamReader(new FileInputStream(file), "UTF-8")
+        new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8)
       );
     ) {
       while ((text = reader.readLine()) != null) {
@@ -41,20 +42,20 @@ public class Leetifier {
   public static void leetify(String text) {
     text =
       text
-        .replaceAll("l", "1")
-        .replaceAll("e", "3")
-        .replaceAll("t", "7")
-        .replaceAll("o|O", "0")
-        .replaceAll("i", "!")
-        .replaceAll("A", "4")
-        .replaceAll("s", "5");
+        .replace("l", "1")
+        .replace("e", "3")
+        .replace("t", "7")
+        .replaceAll("[o|O]", "0")
+        .replace("i", "!")
+        .replace("A", "4")
+        .replace("s", "5");
 
     try (
       BufferedWriter writer = new BufferedWriter(
-        new FileWriter(new File("24ub3r13hr1ing.txt"))
+        new FileWriter(new File("T09-Data-Streams\\src\\24ub3r13hr1ing.txt"))
       );
     ) {
-      String lines[] = text.split("\n");
+      String[] lines = text.split("\n");
 
       for (String string : lines) {
         writer.write(string + "\n");
@@ -65,7 +66,9 @@ public class Leetifier {
   }
 
   public static void main(String[] args) {
-    String text = getText(new File("Zauberlehrling.txt"));
+    String text = getText(
+      new File("T09-Data-Streams\\src\\Zauberlehrling.txt")
+    );
     leetify(text);
   }
 }

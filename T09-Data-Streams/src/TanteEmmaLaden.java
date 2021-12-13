@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class TanteEmmaLaden {
@@ -19,12 +19,12 @@ public class TanteEmmaLaden {
     range = new ArrayList<>();
   }
 
-  public ArrayList<Article> getRange() {
+  public List<Article> getRange() {
     return range;
   }
 
   public void addArticle() {
-    System.out.println("Geben Sie einen Namen f�r das Produkt an: ");
+    System.out.println("Geben Sie einen Namen für das Produkt an: ");
     String name = scanner.nextLine();
     System.out.println("Geben Sie eine Marke an: ");
     String brand = scanner.nextLine();
@@ -44,7 +44,7 @@ public class TanteEmmaLaden {
 
   public void saveRange() {
     try (BufferedWriter writer = new BufferedWriter(new FileWriter(file));) {
-      if (range.size() == 0) {
+      if (range.isEmpty()) {
         return;
       }
       for (Article article : range) {
@@ -114,7 +114,7 @@ public class TanteEmmaLaden {
         this.saveRange();
         System.exit(0);
       } else {
-        System.out.println("Ihre Eingabe war ung�ltig");
+        System.out.println("Ihre Eingabe war ungültig");
       }
     }
   }
